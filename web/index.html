@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de actividades</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">EJERCICIOS 1, 2 Y 6</p>
+      <h1>Registro de actividades</h1>
+      <p class="subtitle">Aplicación web conectada a una API REST y MongoDB.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Estado de la conexión</h2>
+      <p id="status">Comprobando API…</p>
+      <button id="refresh" class="secondary">Comprobar de nuevo</button>
+    </section>
+
+    <section class="panel">
+      <h2>Agregar un registro</h2>
+      <form id="item-form">
+        <label for="title">Nombre de la actividad</label>
+        <div class="form-row">
+          <input id="title" name="title" maxlength="120" placeholder="Ej. Primera actividad" required>
+          <button type="submit">Guardar</button>
+        </div>
+        <p id="feedback" class="feedback" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="list-heading">
+        <h2>Registros guardados</h2>
+        <button id="reload" class="secondary">Actualizar</button>
+      </div>
+      <ul id="items" class="items"><li>Cargando registros…</li></ul>
+    </section>
+    <footer>Proyecto académico · HTML, CSS, JavaScript, Express y MongoDB Atlas</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
